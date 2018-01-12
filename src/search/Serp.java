@@ -36,7 +36,6 @@ public class Serp {
         Collections.sort(results, new Comparator<SearchResult>() {
             @Override
             public int compare(SearchResult left, SearchResult right) {
-                // -1 - less than, 1 - greater than, 0 - equal, all inversed for descending
                 return left.score > right.score ? -1 : (left.score < right.score) ? 1 : 0;
             }
         });
@@ -84,13 +83,3 @@ public class Serp {
     }
 }
 
-
-/*
-
- query
- count
- results
-
-
-
- */

@@ -23,10 +23,8 @@ public class IndexSearch {
             String url;
             String header;
             int countWord = 0;
-            //fileName = "/home/nadezhda/IdeaProjects/search/index" + "/" + countTxt + ".txt";
             File file = (listOfFiles[i]);
             Scanner scn = new Scanner(file);
-            //System.out.println(fileName);
             try {
 
                 url = scn.nextLine();
@@ -43,8 +41,6 @@ public class IndexSearch {
                 }
 
                 if (countWord > 0) {
-
-                    //System.out.println(header + ":" + countWord);
 
                     SearchResult sr = new SearchResult(countWord, file.getName(), url, header);
                     results.add(sr);
@@ -70,10 +66,8 @@ public class IndexSearch {
 
             String url;
             int countWord = 0;
-            //fileName = "/home/nadezhda/IdeaProjects/search/index" + "/" + countTxt + ".txt";
             File file = (listOfFiles[i]);
             Scanner scn = new Scanner(file);
-            //System.out.println(fileName);
             try {
 
                 url = scn.nextLine();
@@ -83,8 +77,6 @@ public class IndexSearch {
                     countWord += getLineScore(line, massQuery);
 
                 if (countWord > 0) {
-
-                    //System.out.println(header + ":" + countWord);
 
                     SearchResult sr = new SearchResult(countWord, file.getName(), url, null);
                     results.add(sr);
@@ -106,14 +98,12 @@ public class IndexSearch {
 
         for (int j = 0; j < massQuery.length; j++) {
             if (line.contains(massQuery[j])) {
-                // System.out.println(fileName + ":" + line);
                 countWord++;
                 score += countWord;
             }
 
         }
 
-        //return countWord;
         return score;
     }
 }

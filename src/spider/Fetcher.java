@@ -37,14 +37,11 @@ public class Fetcher {
                 URL _url = new URL(url);
                 HttpURLConnection connection = (HttpURLConnection) _url.openConnection();
                 int code = connection.getResponseCode();
-                //System.out.println(url + ":"+code);
-                //connection.setRequestProperty("Accept-Charset", charset);
                 LOGGER.info("Fetched " + url + " with code " + code);
                 if (code == 200) {
                     InputStream response = connection.getInputStream();
                     Scanner scanner = new Scanner(response);
                     String responseBody = scanner.useDelimiter("\\A").next();
-                    //System.out.println(responseBody);
                     Thread.sleep(1000);
                     ind.processDoc(url, responseBody);
                 }

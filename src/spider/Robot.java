@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Robot {
     public static void main(String args[]) throws Exception {
 
-        String urlsFileName = Constants.urlsFilePath;     //args[0];
+        String urlsFileName = Constants.urlsFilePath;
 
         ArrayList<String> urls = new ArrayList<>();
 

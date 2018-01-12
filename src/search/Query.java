@@ -10,7 +10,7 @@ public class Query {
     String[] massQuery;
 
 
-    public void talkWithUser() throws IOException { //чтение и обработка данных с консоли
+    public void talkWithUser() throws IOException {
 
 
         Scanner scn = new Scanner(System.in);

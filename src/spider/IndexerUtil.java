@@ -82,7 +82,6 @@ public class IndexerUtil {
                     freq.put(result[i], n + 1);
                 }
 
-               // System.out.println(result[i]);
             }
 
         }
@@ -91,7 +90,6 @@ public class IndexerUtil {
         Collections.sort(array, new Comparator<Map.Entry<String, Integer>>() {
             @Override
             public int compare(Map.Entry<String, Integer> left, Map.Entry<String, Integer> right) {
-                // -1 - less than, 1 - greater than, 0 - equal, all inversed for descending
                 return left.getValue() > right.getValue() ? -1 : (left.getValue() < right.getValue()) ? 1 : 0;
             }
         });
@@ -103,8 +101,6 @@ public class IndexerUtil {
         } else {
             res = array;
         }
-
-        //System.out.println(array);
 
         return res;
     }
